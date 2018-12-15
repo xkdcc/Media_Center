@@ -1,0 +1,7 @@
+#!/bin/sh
+
+sudo umount /media/pi/got-a-usb
+# Sometimes, it will mount to got-a-usb1, so let's remove got-a-usb* before a new mount operation
+sudo rm -fr /media/pi/got-a-usb*
+sudo mount -t auto -o umask=000,rw /dev/sda2 /media/pi/got-a-usb/
+
