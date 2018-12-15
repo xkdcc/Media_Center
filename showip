@@ -1,0 +1,6 @@
+#!/bin/sh
+
+cur_ip=`curl -s http://ipecho.net/plain; echo;`
+echo "IP: $cur_ip"
+geoiplookup -f /usr/share/GeoIP/GeoLiteCity.dat $cur_ip
+
