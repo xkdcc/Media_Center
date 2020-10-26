@@ -1,0 +1,11 @@
+[Unit]
+Description=Start VPN
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/piba/brant/programs/bin/myip.sh -s
+
+[Install]
+After=network-online.target
+WantedBy=multi-user.target

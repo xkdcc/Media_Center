@@ -1,0 +1,14 @@
+[Unit]
+Description=Transmission BitTorrent Daemon
+After=keepmyvpn.service
+
+[Service]
+User=piba
+#User=debian-transmission
+Type=notify
+ExecStart=/usr/bin/transmission-daemon -f -g /home/piba/.config/transmission-daemon --log-info --logfile /var/log/transmission.log
+ExecStop=/bin/kill -s STOP $MAINPID
+ExecReload=/bin/kill -s HUP $MAINPID
+
+[Install]
+WantedBy=multi-user.target

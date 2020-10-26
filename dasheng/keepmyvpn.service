@@ -1,0 +1,12 @@
+[Unit]
+Description=Keep my vpn
+After=bcstartvpn.service
+
+[Service]
+User=root
+Type=notify
+ExecStart=/home/piba/brant/programs/bin/keepmyvpn.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
