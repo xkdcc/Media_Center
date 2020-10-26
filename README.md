@@ -1,3 +1,3 @@
-# raspberry
+# Media Center Utilities
 
-Some scripts created for my raspberry PI.
+Some scripts created for my media center boxes.
